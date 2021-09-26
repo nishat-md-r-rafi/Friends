@@ -1,0 +1,8 @@
+.header-item {
+  background-color: antiquewhite;
+  cursor: hand;
+  color: cadetblue;
+  border-radius: 20px;
+  margin: 0 20px;
+  padding: 10px 20px;
+}

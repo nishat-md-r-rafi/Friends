@@ -1,0 +1,19 @@
+.friend {
+  background-color: rgba(186, 248, 238, 0.959);
+  border-radius: 10px;
+  padding: 25px;
+}
+
+.friend img {
+  height: 300px;
+  width: 300px;
+  border-radius: 150px;
+}
+
+button {
+  background-color: cornflowerblue;
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 5px;
+}

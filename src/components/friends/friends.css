@@ -1,0 +1,10 @@
+.friends-class {
+  display: flex;
+}
+
+.friend-container {
+  display: grid;
+  margin: 10px 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}

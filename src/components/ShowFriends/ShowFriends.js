@@ -1,10 +1,20 @@
 import React from "react";
 import "../ShowFriends/ShowFriends.css";
 
-const ShowFriends = (proos) => {
+const ShowFriends = (props) => {
+  const seeFriend = props.friend;
+  console.log(seeFriend);
+  let name = "";
+  let age = 0;
+  for (let friend of seeFriend) {
+    name += " " + friend.name;
+    age += friend.age;
+  }
   return (
     <div>
-      <h1>Select and See Friends </h1>
+      <h1>Click to See Friend Details</h1>
+      <h3>All the Name you Select:{name}</h3>
+      <h3> Their Total Age: {age}</h3>
     </div>
   );
 };

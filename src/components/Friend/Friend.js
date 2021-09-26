@@ -3,9 +3,7 @@ import "../Friend/friend.css";
 
 const Friend = (props) => {
   const { name, hometown, age, img, passion, ex_salary } = props.data;
-  const handleClick = (name, town, age) => {
-    console.log(name, age, town);
-  };
+  /* console.log(props); */
   return (
     <div className="friend">
       <img src={img} alt="" />
@@ -14,7 +12,7 @@ const Friend = (props) => {
       <h3>Age: {age}</h3>
       <h3>Passion: {passion}</h3>
       <h3>Salary Expectation: {ex_salary} Taka</h3>
-      <button onClick={() => handleClick(name, hometown, age)}>
+      <button onClick={() => props.handleFriend(props.data)}>
         See Details
       </button>
     </div>

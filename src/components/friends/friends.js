@@ -6,7 +6,7 @@ import ShowFriends from "../ShowFriends/ShowFriends";
 // import "../../../public/";
 const Friends = () => {
   const [friends, setFriends] = useState([]);
-  const [showFriend, setShowFriend] = useSate([]);
+  const [showFriend, setShowFriend] = useState([]);
 
   useEffect(() => {
     fetch("./friends.JSON")
@@ -14,19 +14,20 @@ const Friends = () => {
       .then((data) => setFriends(data));
   }, []);
 
-  useEffect(() => {
-    if (showFriend.length) {
-    }
-  }, []);
+  const handleFriend = (newFriend) => {
+    const newShowFriend = [...showFriend, newFriend];
+    setShowFriend(newShowFriend);
+  };
+
   return (
     <div className="friends-class">
       <div className="friend-container">
         {friends.map((friend) => (
-          <Friend data={friend}></Friend>
+          <Friend data={friend} handleFriend={handleFriend}></Friend>
         ))}
       </div>
       <div className="show-friend">
-        <ShowFriends></ShowFriends>
+        <ShowFriends friend={showFriend}></ShowFriends>
       </div>
     </div>
   );

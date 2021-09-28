@@ -1,6 +1,8 @@
-# Getting Started with Create React App
-
+# Find Friend APP
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Description
+Here some description of friend list is given. You will find Some of my friend profile here.
 
 ## Available Scripts
 

@@ -1,20 +1,23 @@
 import React from "react";
+import SideFriend from "../../SideFriend/SideFriend";
+import "../ShowFriends/ShowFriends.css";
 import "../ShowFriends/ShowFriends.css";
 
 const ShowFriends = (props) => {
   const seeFriend = props.friend;
-  console.log(seeFriend);
-  let name = "";
   let age = 0;
   for (let friend of seeFriend) {
-    name += " " + friend.name;
     age += friend.age;
   }
   return (
-    <div>
+    <div className="show-friend">
       <h1>Click to See Friend Details</h1>
-      <h3>All the Name you Select:{name}</h3>
-      <h3> Their Total Age: {age}</h3>
+      <p>Their total age is: {age}</p>
+      <div>
+        {props.friend.map((friend) => (
+          <SideFriend data={friend} key={friend.name}></SideFriend>
+        ))}
+      </div>
     </div>
   );
 };

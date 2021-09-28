@@ -23,7 +23,11 @@ const Friends = () => {
     <div className="friends-class">
       <div className="friend-container">
         {friends.map((friend) => (
-          <Friend data={friend} handleFriend={handleFriend}></Friend>
+          <Friend
+            data={friend}
+            handleFriend={handleFriend}
+            key={friend.name}
+          ></Friend>
         ))}
       </div>
       <div className="show-friend">

@@ -1,0 +1,14 @@
+.side {
+  background-color: blanchedalmond;
+  color: black;
+  display: flex;
+  padding: 10px;
+  border-radius: 8px;
+  justify-content: space-between;
+}
+
+.side img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+}
